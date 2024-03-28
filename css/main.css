@@ -20,12 +20,12 @@ a {
 
 @font-face {
   font-family: "OpenSansRegular";
-  src: url(/fonts/OpenSans-Regular.woff);
+  src: url(../fonts/OpenSans-Regular.woff);
 }
 
 @font-face {
   font-family: "OpenSansBold";
-  src: url(/fonts/OpenSans-Bold.woff);
+  src: url(../fonts/OpenSans-Bold.woff);
   font-weight: 700;
 }
 
@@ -62,7 +62,7 @@ a {
 }
 
 .header {
-  background-image: url(/img/banner-bg.jpg);
+  background-image: url(../img/banner-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   text-transform: uppercase;
@@ -132,19 +132,19 @@ a {
 }
 
 .img-plants {
-  background-image: url(/img/trend1.jpg); 
+  background-image: url(../img/trend1.jpg); 
 }
 
 .ims-chees {
-  background-image: url(/img/trend2.jpg);
+  background-image: url(../img/trend2.jpg);
 }
 
 .img-mountain {
-  background-image: url(/img/trend3.jpg);
+  background-image: url(../img/trend3.jpg);
 }
 
 .img-mandarins {
-  background-image: url(/img/trend4.jpg);
+  background-image: url(../img/trend4.jpg);
 }
 
 .img-trend::before {
