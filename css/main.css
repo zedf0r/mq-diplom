@@ -603,6 +603,7 @@ a {
 .radio_text {
   margin-left: 30px;
   margin-top: 8px;
+  cursor: pointer;
 }
 
 .radio_text-second {
