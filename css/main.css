@@ -40,6 +40,7 @@ a {
 .inner {
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
 
 .logo {
@@ -479,10 +480,10 @@ a {
 .products {
   display: flex;
   box-sizing: border-box;
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
   justify-content: space-around;
 }
 
@@ -495,7 +496,7 @@ a {
 .product-content {
   box-sizing: border-box;
   border: 3px solid #b59f5b;
-  width: 340px;
+  max-width: 340px;
   min-height: 200px;
   margin-top: -50px;
   padding: 15px;
@@ -574,7 +575,7 @@ a {
 .popup {
   font-family: "OpenSansRegular", sans-serif;
   margin: auto;
-  width: 380px;
+  max-width: 380px;
   height: 620px;
   background: #ffffff;
   position: relative;
@@ -638,7 +639,6 @@ a {
   background-size: cover;
   vertical-align: middle;
   margin-right: 5px;
-  
 }
 
 .radio_button:checked ~ .input_radio-text::before {
@@ -754,7 +754,8 @@ a {
   }
 
   .product {
-    margin: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
@@ -796,6 +797,14 @@ a {
     display: none;
   }
 
+  .text {
+    margin-top: 35px;
+  }
+
+  .content-title {
+    margin-bottom: 40px;
+  }
+
   .burger {
     display: block;
     margin-top: -10px;
@@ -804,12 +813,18 @@ a {
 
   .header-title {
     font-size: 40px;
+    line-height: 55px;
   }
   .title {
     font-size: 18px;
   }
   .trend-text {
     font-size: 17px;
+    line-height: 22px;
+  }
+  .text {
+    line-height: 22px;
+    font-size: 14px;
   }
   .content-title {
     font-size: 17px;
@@ -819,7 +834,149 @@ a {
   }
 }
 
+@media (max-width: 768px) {
+  .product {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+}
 
-@media (max-width: 769px) {
+
+@media (max-width: 660px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .trend {
+    display: block;
+  }
+  
+  .img-trend {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .sidebar-margin {
+    margin-top: 45px;
+  }
+  
+  .text {
+    margin-top: 15px;
+  }
+
+  .product {
+    width: 330px;
+  }
+
+  .content-title {
+    margin-bottom: 10px;
+  }
+
+  .wrap {
+    padding: 15px;
+  }
+
+  .header-title {
+    font-size: 26px;
+    line-height: 36px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .trend-text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .content-title {
+    font-size: 16px;
+  }
+  .product-title {
+    font-size: 16px;
+  }
+
+
+  
+}
+
+@media (max-width: 400px) {
+  .logo {
+    width: 270px;
+    position: absolute;
+    top: 80px;
+    left: 45px;
+  }
+
+  .product {
+    margin: 0;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .post-image {
+    width: 330px;
+  }
+
+  .posts {
+    width: 330px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .product{
+    margin-top: 25px;
+  }
+  .product_first {
+    margin-top: 0;
+  }
+
+  .popup {
+    max-width: 330px;
+    height: 580px;
+  }
+
+  .popup_title {
+    margin-top: 20px;
+  }
+
+  .popup_text {
+    margin-top: 30px;
+  }
+
+  .popup_field, .feedback-button, .feedback{
+    width: 260px;
+  }
+
+  .feedback-button {
+    font-size: 16px;
+  }
+
+  .input_radio-text::before {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-image: url(../svg/form-empty-circle.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+  .radio_button:checked ~ .input_radio-text::before {
+    content: '';
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    background-image: url(../svg/form-circle.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+  }
+  .close-popup {
+    width: 25px;
+    height: 25px;
+  }
 
 }
+
