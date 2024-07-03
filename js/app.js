@@ -1,6 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    document.getElementById("burger").addEventListener("click", function()
+    const burger = document.getElementById("burger");
+    const overlay = document.getElementById("overlay");
+    const header = document.querySelector("header")
+
+    burger.addEventListener("click", function() 
     {
-        document.querySelector("header").classList.toggle("open")
+        header.classList.toggle("open");
+    })
+
+    overlay.addEventListener("click", function() {
+        header.classList.remove("open")
     })
 })
