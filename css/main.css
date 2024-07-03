@@ -49,7 +49,6 @@ a {
 
 .menu {
   padding-top: 13px;
-
 }
 
 .burger {
@@ -79,6 +78,9 @@ a {
   z-index: 1;
   padding-top: 28px;
   padding-bottom: 126px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .header::before {
@@ -800,8 +802,50 @@ a {
     background-image: url(../img/banner-bg-tablet.jpg);
   }
 
+  .wrap {
+    padding: 0;
+  }
+
+  .header {
+    padding-top: 0;
+  }
+
+
+  .logo {
+    padding: 28px 0 0 15px;
+  }
+
+  .burger {
+    position: relative;
+    display: block;
+    margin-top: 25px;
+    margin-right: 25px;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 2;
+  }
+
+  .burger-open {
+    transition: opacity 0.5s linear;
+  }
+
+  .menu {
+    position: absolute;
+    box-sizing: border-box;
+    background-color: rgba(181,159,91,0.7) ;
+    padding: 75px 30px 10px;
+    border-radius: 30% 0 0 30%;
+    z-index: 1;
+    width: 120px;
+    right: -120px;
+    transition: transform 0.5s;
+  }
+
   .list-menu {
-    display: none;
+    display: block;
+  }
+
+  .list-link {
+    padding: 10px;
   }
 
   .text {
@@ -812,10 +856,25 @@ a {
     margin-bottom: 40px;
   }
 
-  .burger {
-    display: block;
-    margin-top: -10px;
-    background-color: rgba(0, 0, 0, 0);
+  .header.open .burger-open {
+    opacity: 0;
+  }
+
+  .burger-close {
+    position: absolute;
+    margin-left: -10px;
+    top: 6px;
+    left: 15px;
+    opacity: 0;
+    transition: opacity 0.7s linear;
+  }
+
+  .header.open .burger-close {
+    opacity: 1;
+  }
+
+  .header.open .menu {
+    transform: translateX(-100%);
   }
 
   .header-title {
@@ -877,10 +936,6 @@ a {
 
   .content-title {
     margin-bottom: 10px;
-  }
-
-  .wrap {
-    padding: 15px;
   }
 
   .header-title {
